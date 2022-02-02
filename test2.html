@@ -27,13 +27,16 @@
             /* border: 1px solid black; */
             position: relative;
             margin-bottom: 20px;
+            
         }
 
         nav{
             /* width: 100%; */
             height: 50px;
-            border: 1px solid black;
+            /* border: 1px solid ; */
             position: relative;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
+            border-top: 1px solid #e4e8eb;
         }
 
         .aside_lf{
@@ -44,11 +47,11 @@
         }
 
         section {
-            /* width: 60%; */
-            height: 100vh;
+            width: 1190px;
+            height: 2842px;
  /*            border: 1px solid black; */
 /*             float: left;
- */            position: relative;
+ */         position: relative;
 
         }
 
@@ -75,9 +78,9 @@
         }
 
         .search_bar {
-            height: 55px;
-            width: 580px;
-            border: 2px solid #2DB400;
+            height: 52px;
+            width: 582px;
+            border: 2px solid #19ce60;
             background: #fff;
             float: left;
         }
@@ -92,32 +95,33 @@
         }
 
         .search_button {
-            width: 55px;
-            height: 100%;
+            width: 54px;
+            height: 54px;
             border: 0px;
-            background: #2DB400;
+            background: #19ce60;
             outline: none;
             float: right;
-            color: #fff
+            color: #fff;
+            padding: 0;
+            margin: 0 auto;
         }
 
         .nav_container {
-            width: 60%;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: none;
             list-style-type: none;
             display: flex;
             flex-direction: row;
             position: absolute;
-/*             left: 50%;
-            margin-left: -30%; */
+            font-weight: bold;
+
         }
 
         .nav_item {
             padding-top: 15px;
             padding-bottom: 15px;
-            padding-right: 9px;
+            padding-right: 14px;
             cursor: pointer;
         }
 
@@ -125,25 +129,26 @@
             text-align: center;
             text-decoration: none;
             color: black;
+            font-size: 15px;
         }
 
         .article-left {
-            width: 62%;
-            height: 100vh;
+            width: 750px;
+            height: 2842px;
             margin: 0;
             float:left;
-            background-color: blanchedalmond;
         }
 
         .headline-news {
-            /* width: 62%; */
-            height: 50px;
+            width: 750px;
+            height: 49px;
             background-color: rgb(248, 245, 245);
             border: 1px solid lightgray;
             position: relative;
             margin-top: 4%;
             display: flex;
             align-items: center;
+            font-size: 13px;
         }
 
         .headline-menu-container {
@@ -161,7 +166,6 @@
 
         .headline-menu {
             padding-right: 9px;
-            /* position: relative; */
             
         }
 
@@ -173,9 +177,8 @@
         }
 
         .news-table {
-            width: 100%;
+            width: 750px;
             height: 300px;
-            /* position: absolute; */
             margin-top: 5%;
             border: 1px solid lightgray;
             border-collapse: collapse;
@@ -187,50 +190,72 @@
         
         .article-right{
             margin:0;
-            height: 100vh;
-            width: 100%;
-            background-color: aqua;
+            height: 2842px;
+            width: 350px;
+            float: right;
         }
 
         .login-box {
             background-color: rgb(248, 245, 245);
             border: 1px solid lightgray;
-            width: 33%;
-            height: 130px;
-/*             position: absolute;
-            right: 0%;
-            top: 25px; */
-            display: flex;
+            width: 350px;
+            height: 135px;
             float:right;
-            margin-top: 2%;
+            margin-top: 20px;
+            font-size: 12px;
         }
 
+        .Naver-login {
+            width: 315px;
+            height: 48px;
+            background-color: #19ce60;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            color: #fff;
+            margin: 0 auto;
+            border-radius: 2px;
+            line-height: 48px;
+        }
+        .Naver-login p {
+            margin: 0;
+            margin-top: 11px;
+        }
+        .login-box a {
+            text-decoration: none;
+            color: #808080;
+        }
+        .Naver-login a {
+            text-decoration: none;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header class="inner">
         <div class="logo_search">
             <div class="logo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzVJr36i1jw-0CC5Ad-Z6VUkzr8qEZYH-AnA&usqp=CAU" width="220px" height="55px">
+                <img src="logo.png" width="222px" height="52px">
             </div>
             <div class="search_bar">
                 <input type="text" class="search_input">
-                <button class="search_button"><img src="search.png" width="35px" height="35px"></button>
+                <button class="search_button"><img src="search2.png" width="54px" height="54px"></button>
             </div>
         </div>
     </header>
     
-    <nav >
+    <nav>
         <div class="inner">
             <ul class="nav_container">
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">메일</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">카페</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">블로그</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">지식iN</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">쇼핑</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">쇼핑LIVE</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">Pay</a></li>
-                <li class="nav_item"><a href="" style="color:#2DB400; font-weight: bold;">TV</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">메일</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">카페</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">블로그</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">지식iN</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">쇼핑</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">쇼핑LIVE</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">Pay</a></li>
+                <li class="nav_item"><a href="" style="color:#19ce60; font-weight: bold;">TV</a></li>
                 <li class="nav_item"><a href="">사전</a></li>
                 <li class="nav_item"><a href="">뉴스</a></li>
                 <li class="nav_item"><a href="">증권</a></li>
@@ -250,7 +275,7 @@
     <section class="inner">
         <article class="article-left">
             <div class="headline-news">
-                <div>
+                <div style="margin: 10px; font-weight: bold;">
                     연합뉴스
                 </div>
                 <div class="headline-menu-container">
@@ -265,23 +290,28 @@
             <div>
                 <table class="news-table">
                     <tr>
-                        <td></td><td></td><td></td><td></td><td></td><td></td>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
                     <tr>
-                        <td></td><td></td><td></td><td></td><td></td><td></td>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
                     <tr>
-                        <td></td><td></td><td></td><td></td><td></td><td></td>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
                     <tr>
-                        <td></td><td></td><td></td><td></td><td></td><td></td>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
                 </table>
             </div>
         </article>
         <article class="article-right">
             <div class="login-box">
-
+                <div style="width:315px; height:16px; margin: 0 auto; margin-top: 16px; color: #808080;">
+                    <a href="">네이버를 더 안전하고 편리하게 이용하세요</a>
+                </div>
+                <div class="Naver-login">
+                    <a href=""><p>Naver 로그인</p></a>
+                </div>
             </div>
         </article>
     </section>
