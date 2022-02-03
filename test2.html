@@ -39,26 +39,10 @@
             border-top: 1px solid #e4e8eb;
         }
 
-        .aside_lf{
-            height: 100vh;
-            width: 20%;
-            border: 1px solid black;
-            float: left;
-        }
-
         section {
             width: 1190px;
             height: 2842px;
- /*            border: 1px solid black; */
-/*             float: left;
- */         position: relative;
-
-        }
-
-        .aside_rt {
-            height: 100vh;
-            width: 20%;
-            border: 1px solid black;
+            position: relative;
         }
 
         .logo_search {
@@ -70,6 +54,10 @@
             margin-top: -25px;
             margin-left: -570px;
             
+        }
+
+        a {
+            text-decoration: none;
         }
 
         .logo {
@@ -142,7 +130,7 @@
         .headline-news {
             width: 750px;
             height: 49px;
-            background-color: rgb(248, 245, 245);
+            background-color: #f7f9fa;
             border: 1px solid lightgray;
             position: relative;
             margin-top: 4%;
@@ -179,7 +167,7 @@
         .news-table {
             width: 750px;
             height: 300px;
-            margin-top: 5%;
+            /* margin-top: 15px; */
             border: 1px solid lightgray;
             border-collapse: collapse;
         }
@@ -196,11 +184,9 @@
         }
 
         .login-box {
-            background-color: rgb(248, 245, 245);
+            background-color: #f7f9fa;
             border: 1px solid lightgray;
-            width: 350px;
             height: 135px;
-            float:right;
             margin-top: 20px;
             font-size: 12px;
         }
@@ -229,6 +215,68 @@
         .Naver-login a {
             text-decoration: none;
             color: #fff;
+        }
+
+        .login-bottom {
+            width: 315px;
+            height: 16px;
+            margin: 0 auto;
+            margin-top: 13px;
+        }
+
+        .signup {
+            float: right;
+        }
+
+        .stock-box{
+            height: 45px;
+            border: 1px solid lightgray;
+            margin: 12px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 14px;
+        }
+
+        .stock-box button{
+            width: 23px;
+            height: 23px;
+            background-color: #fff;
+        }
+
+        .newsstance {
+            margin: 20px 0px;
+            font-size: 14px;
+        }
+
+        .newsstance a{
+            color: #000;
+        }
+
+        .newsstance a:nth-child(2n+1){
+            font-weight: bold;
+        }
+
+        .theme-post {
+            height: 2048px;
+        }
+
+        .theme-title {
+            height: 16px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        .theme-title a {
+            font-size: 12px;
+            color: #808080;
+        }
+        .theme-title div {
+            font-size: 12px;
+            color: #808080;
         }
     </style>
 </head>
@@ -268,10 +316,6 @@
         </div>
     </nav>
 
-<!--     <aside class="aside_lf">
-
-    </aside> -->
-
     <section class="inner">
         <article class="article-left">
             <div class="headline-news">
@@ -286,6 +330,9 @@
                         <li class="headline-menu"><a href="">올림픽</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="newsstance">
+                <a href="">뉴스스탠스 > &nbsp;</a> <a href="">구독한 언론사 &nbsp;</a> <a href="">전체언론사</a>
             </div>
             <div>
                 <table class="news-table">
@@ -303,6 +350,15 @@
                     </tr>
                 </table>
             </div>
+            <div class="theme-post">
+                <div class="theme-title">
+                    <p><strong>오늘 읽을만한 글</strong> <small style="color:#808080;">주제별로 분류된 다양한 글 모음</small></p>
+                    <div>
+                        <span>OOO개의 글 | </span> <a href="">관심주제 설정</a>
+                    </div>
+                </div>
+
+            </div>
         </article>
         <article class="article-right">
             <div class="login-box">
@@ -310,15 +366,19 @@
                     <a href="">네이버를 더 안전하고 편리하게 이용하세요</a>
                 </div>
                 <div class="Naver-login">
-                    <a href=""><p>Naver 로그인</p></a>
+                    <a href=""><p>NAVER <small>로그인</small></p></a>
                 </div>
+                <div class="login-bottom">
+                    <a href="" class="find">아이디 &nbsp;</a><a href="" class="find">비밀번호찾기</a>
+                    <a href="" class="signup">회원가입</a>
+                </div>
+            </div>
+            <div class="stock-box">
+                <div><span>증시 | </span> <span>코스피</span></div>
+                <div><button></button><button></button></div>
             </div>
         </article>
     </section>
-
-<!--     <aside class="aside_rt">
-
-    </aside> -->
 
     <footer>
 
