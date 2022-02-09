@@ -22,18 +22,14 @@
         }
 
         header {
-            /* width: 100%; */
-            height: 150px;
-            /* border: 1px solid black; */
+            height: 160px;
             position: relative;
             margin-bottom: 20px;
-            
+
         }
 
         nav{
-            /* width: 100%; */
             height: 50px;
-            /* border: 1px solid ; */
             position: relative;
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
             border-top: 1px solid #e4e8eb;
@@ -153,7 +149,7 @@
         }
 
         .headline-menu {
-            padding-right: 9px;
+            padding-right: 15px;
             
         }
 
@@ -165,17 +161,49 @@
         }
 
         .news-table {
-            width: 750px;
-            height: 300px;
-            /* margin-top: 15px; */
+            /* width: 750px;
+            height: 300px; */
             border: 1px solid lightgray;
             border-collapse: collapse;
         }
 
+         /* .news-table button {
+            display: none; 
+        } */
+
+
+
         .news-table td {
+            width: 125px;
+            height: 64px;
             border: 1px solid lightgray;
+            padding: 0px;
+            text-align: center;
+        }
+
+        
+        .news-table-over {
+            
+            border: 1px solid lightgray;
+            border-collapse: collapse;
+            position: absolute;
+            background-color: #f7f9fa;
+            top: 139px;
+            /* opacity: 0.5; */
+            display: none;
         }
         
+        .news-table-over td{
+            border: 1px solid lightgray;
+            width: 124px;
+            height: 64px;
+            padding: 0px;
+        }
+        
+        .news-table td:hover {
+            background-color: #f7f9fa;
+        }
+
         .article-right{
             margin:0;
             height: 2842px;
@@ -319,7 +347,7 @@
     <section class="inner">
         <article class="article-left">
             <div class="headline-news">
-                <div style="margin: 10px; font-weight: bold;">
+                <div style="margin: 15px; font-weight: bold;">
                     연합뉴스
                 </div>
                 <div class="headline-menu-container">
@@ -338,6 +366,20 @@
                 <table class="news-table">
                     <tr>
                         <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
+                    </tr>
+                    <tr>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
+                    </tr>
+                    <tr>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
+                    </tr>
+                    <tr>
+                        <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
+                    </tr>
+                </table>
+                <table class="news-table-over">
+                    <tr>
+                        <a><td><button>구독</button><button>기사보기</button></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
                     <tr>
                         <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
