@@ -161,8 +161,6 @@
         }
 
         .news-table {
-            /* width: 750px;
-            height: 300px; */
             border: 1px solid lightgray;
             border-collapse: collapse;
         }
@@ -182,14 +180,13 @@
         }
 
         
-        .news-table-over {
+       /*  .news-table-over {
             
             border: 1px solid lightgray;
             border-collapse: collapse;
             position: absolute;
             background-color: #f7f9fa;
             top: 139px;
-            /* opacity: 0.5; */
             display: none;
         }
         
@@ -198,10 +195,55 @@
             width: 124px;
             height: 64px;
             padding: 0px;
-        }
+        } */
         
         .news-table td:hover {
             background-color: #f7f9fa;
+        }
+
+        .newsstance {
+            margin: 20px 0px;
+            font-size: 14px;
+        }
+        .newsstance a{
+            color: #000;
+        }
+        .newsstance a:nth-child(2n+1){
+            font-weight: bold;
+        }
+
+        .theme-post {
+            height: 2048px;
+        }
+        .theme-title {
+            height: 16px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        .theme-title a {
+            font-size: 12px;
+            color: #808080;
+        }
+        .theme-title div {
+            font-size: 12px;
+            color: #808080;
+        }
+        .theme-link {
+            border: 1px solid lightgray;
+            border-collapse: collapse;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .theme-link td{
+            width: 93px;
+            height: 48px;
+            border: 1px solid lightgray;
+            padding: 0px;
+            text-align: center;
         }
 
         .article-right{
@@ -272,39 +314,18 @@
             background-color: #fff;
         }
 
-        .newsstance {
-            margin: 20px 0px;
-            font-size: 14px;
-        }
-
-        .newsstance a{
-            color: #000;
-        }
-
-        .newsstance a:nth-child(2n+1){
+        .shop-header {
+            display: flex;
+            height: 19px;
+            padding: 12px 0px;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
             font-weight: bold;
         }
 
-        .theme-post {
-            height: 2048px;
-        }
-
-        .theme-title {
-            height: 16px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 35px;
-            margin-bottom: 15px;
-        }
-        .theme-title a {
-            font-size: 12px;
-            color: #808080;
-        }
-        .theme-title div {
-            font-size: 12px;
-            color: #808080;
+        .shop-header a{
+            color: #000;
         }
     </style>
 </head>
@@ -377,7 +398,7 @@
                         <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
                 </table>
-                <table class="news-table-over">
+                <!-- <table class="news-table-over">
                     <tr>
                         <a><td><button>구독</button><button>기사보기</button></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
@@ -390,7 +411,7 @@
                     <tr>
                         <a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a><a><td></td></a>
                     </tr>
-                </table>
+                </table> -->
             </div>
             <div class="theme-post">
                 <div class="theme-title">
@@ -399,7 +420,13 @@
                         <span>OOO개의 글 | </span> <a href="">관심주제 설정</a>
                     </div>
                 </div>
-
+                <div>
+                    <table class="theme-link">
+                        <tr>
+                            <a href=""><td>엔터</td></a><a><td>스포츠</td></a><a><td>자동차</td></a><a><td>웹툰</td></a><a><td>경제M</td></a><a><td>MY구독</td></a><a><td>레시피</td></a><a><td>리빙</td></a>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </article>
         <article class="article-right">
@@ -418,6 +445,11 @@
             <div class="stock-box">
                 <div><span>증시 | </span> <span>코스피</span></div>
                 <div><button></button><button></button></div>
+            </div>
+
+            <div class="shop-header">
+                <div><a href="">트렌드쇼핑 > </a></div>
+                <div><a href="">상품</a>&nbsp;&nbsp;<a href="">쇼핑몰</a>&nbsp;&nbsp;<a href="">MEN</a></div>
             </div>
         </article>
     </section>
