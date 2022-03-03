@@ -410,18 +410,21 @@
             position: relative;
             display: block;
         }
-        .group-goods button {
+        .page-button {
             width: 29px;
             height: 29px;
             background-color: #fff;
+            border: 1px solid #dae1e6;
+            display: inline-block;
         }
         .shop-control{
             position: absolute;
             top:13px;
             right: 8px;
+            display: flex;
         }
         .num-box {
-            float: left;
+            /* float: left; */
             height: 29px;
             line-height: 29px;
         }
@@ -446,7 +449,8 @@
             text-align: center;
             position: absolute;
             bottom: 22px;
-
+            display: flex;
+            justify-content: center;
         }
 
         .group-event{
@@ -455,6 +459,16 @@
             padding: 19px 0px 17px;
             border-top: 1px solid #e4e8eb;
         }
+        .event-title{
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .event-control{
+            display: flex;
+        }
+
         .group-plus{
             height: 188px;
             padding: 55px 0 30px;
@@ -605,18 +619,21 @@
                 </div>
 
                 <div class="group-goods">
-                    <div class="shop-control"><div class="num-box"><strong>1</strong> / 18</div>&nbsp;<button></button><button></button></div>
+                    <div class="shop-control"><div class="num-box"><strong>1</strong> / 18</div>&nbsp;<a href="" class="page-button"></a><a href="" class="page-button"></a></div>
 
                     <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
                     <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
                     <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
                     <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
 
-                    <div class="shop-page"><button></button> <div class="num-box">1 / 18</div> <button> </button></div>
+                    <div class="shop-page"><a href="" class="page-button"></a><div class="num-box"> &nbsp; 1 / 18 &nbsp;</div> <a href="" class="page-button"></a></div>
                 </div>
 
                 <div class="group-event">
-
+                    <div class="event-title">
+                        <div><strong>반갑다! 쇼핑뉴스</strong></div>
+                        <div class="event-control"><div class="num-box"> <strong>1</strong> / 4 &nbsp;</div><a href="" class="page-button"></a><a href="" class="page-button"></a></div>
+                    </div>
                 </div>
 
                 <div class="group-plus">
