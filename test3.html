@@ -4,478 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css1.css">
     <title>NAVER</title>
 
-    <style>
-        body {
-            width: 100%;
-            height: 100vh;
-            border: 0;
-            margin: 0;
-            padding: 0;
-        }
 
-        .inner {
-            width: 1130px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        header {
-            height: 160px;
-            position: relative;
-            margin-bottom: 20px;
-
-        }
-
-        nav{
-            height: 50px;
-            position: relative;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 12%);
-            border-top: 1px solid #e4e8eb;
-        }
-
-        section {
-            width: 1190px;
-            height: 2400px;
-            position: relative;
-        }
-
-        footer {
-            height: 424px;
-            background-color: #fafbfc;
-            border-top: 1px solid #e4e8eb;
-            margin-top: 20px;
-        }
-
-        .logo_search {
-            height: 55px;
-            width: 1000px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -25px;
-            margin-left: -570px;
-            
-        }
-
-        a {
-            text-decoration: none;
-        }
-        a:link{
-            color:#000;
-        }
-        a:visited{
-            color:#000;
-        }
-
-        .logo {
-            float: left;
-            margin-right: 25px;
-        }
-
-        .search_bar {
-            height: 52px;
-            width: 582px;
-            border: 2px solid #19ce60;
-            background: #fff;
-            float: left;
-        }
-
-        .search_input {
-            font-size: 25px;
-            width: 325px;
-            padding: 10px;
-            border: 0px;
-            outline: none;
-            float: left;
-        }
-
-        .search_button {
-            width: 54px;
-            height: 54px;
-            border: 0px;
-            background: #19ce60;
-            outline: none;
-            float: right;
-            color: #fff;
-            padding: 0;
-            margin: 0 auto;
-        }
-
-        .nav_container {
-            margin: 0;
-            padding: 0;
-            background-color: none;
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            font-weight: bold;
-
-        }
-
-        .nav_item {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-right: 14px;
-            cursor: pointer;
-        }
-
-        .nav_item a {
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            font-size: 15px;
-        }
-
-        .article-left {
-            width: 750px;
-            height: 2400px;
-            margin: 0;
-            float:left;
-        }
-
-        .headline-news {
-            width: 750px;
-            height: 49px;
-            background-color: #f7f9fa;
-            border: 1px solid lightgray;
-            position: relative;
-            margin-top: 4%;
-            display: flex;
-            align-items: center;
-            font-size: 13px;
-        }
-
-        .headline-menu-container {
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            right: 0;
-            
-        }
-
-        .headline-menu-container ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        .headline-menu {
-            padding-right: 15px;
-            
-        }
-
-        .headline-menu a {
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-
-        .news-table {
-            border: 1px solid lightgray;
-            border-collapse: collapse;
-        }
-
-         /* .news-table button {
-            display: none; 
-        } */
-
-
-
-        .news-table td {
-            width: 125px;
-            height: 64px;
-            border: 1px solid lightgray;
-            padding: 0px;
-            text-align: center;
-        }
-
-        
-       /*  .news-table-over {
-            
-            border: 1px solid lightgray;
-            border-collapse: collapse;
-            position: absolute;
-            background-color: #f7f9fa;
-            top: 139px;
-            display: none;
-        }
-        
-        .news-table-over td{
-            border: 1px solid lightgray;
-            width: 124px;
-            height: 64px;
-            padding: 0px;
-        } */
-        
-        .news-table td:hover {
-            background-color: #f7f9fa;
-        }
-
-        .newsstance {
-            margin: 20px 0px;
-            font-size: 14px;
-        }
-        .newsstance a{
-            color: #000;
-        }
-        .newsstance a:nth-child(2n+1){
-            font-weight: bold;
-        }
-
-        .theme-post {
-            height: 1861px;
-        }
-        .theme-title {
-            height: 16px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 35px;
-            margin-bottom: 15px;
-        }
-        .theme-title a {
-            font-size: 12px;
-            color: #808080;
-        }
-        .theme-title div {
-            font-size: 12px;
-            color: #808080;
-        }
-        .theme-link {
-            border: 1px solid lightgray;
-            border-collapse: collapse;
-            font-size: 13px;
-            font-weight: bold;
-        }
-        .theme-link td{
-            width: 93px;
-            height: 48px;
-            border: 1px solid lightgray;
-            padding: 0px;
-            text-align: center;
-        }
-        .theme-link td a {
-            color: #000;
-            display: block;
-            line-height: 48px;
-        }
-        .theme-link td:nth-child(1) a:hover{
-            color: #e65da0;
-        }
-        .theme-link td:nth-child(2) a:hover{
-            color: #0147b5;
-        }
-        .theme-link td:nth-child(3) a:hover{
-            color: #4a94e1;
-        }
-        .theme-link td:nth-child(4) a:hover{
-            color: #66c971;
-        }
-        .theme-link td:nth-child(5) a:hover{
-            color: #35ae5e;
-        }
-        .theme-link td:nth-child(6) a:hover{
-            color: #5290ff;
-        }
-        .theme-link td:nth-child(7) a:hover{
-            color: #ebaa00;
-        }
-        .theme-link td:nth-child(8) a:hover{
-            color: #c08d31;
-        }
-
-        .theme-container{
-            height: 1861px;
-
-        }
-
-
-        /* 오른쪽 */
-        .article-right{
-            margin:0;
-            height: 2400px;
-            width: 350px;
-            float: right;
-        }
-
-        .login-box {
-            background-color: #f7f9fa;
-            border: 1px solid lightgray;
-            height: 135px;
-            margin-top: 20px;
-            font-size: 12px;
-        }
-
-        .Naver-login {
-            width: 315px;
-            height: 48px;
-            background-color: #19ce60;
-            font-size: 18px;
-            font-weight: 700;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            text-align: center;
-            color: #fff;
-            margin: 0 auto;
-            border-radius: 2px;
-            line-height: 48px;
-        }
-        .Naver-login p {
-            margin: 0;
-            margin-top: 11px;
-        }
-        .login-box a {
-            text-decoration: none;
-            color: #808080;
-        }
-        .Naver-login a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .login-bottom {
-            width: 315px;
-            height: 16px;
-            margin: 0 auto;
-            margin-top: 13px;
-        }
-
-        .signup {
-            float: right;
-        }
-
-        .stock-box{
-            height: 45px;
-            border: 1px solid lightgray;
-            margin: 12px 0px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0px 14px;
-        }
-
-        .stock-box button{
-            width: 23px;
-            height: 23px;
-            background-color: #fff;
-        }
-
-        .shop-header {
-            display: flex;
-            height: 19px;
-            padding: 12px 0px;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .shop-header a{
-            color: #000;
-        }
-
-        .shop-content{
-            height: 1493px;
-            border: 1px solid #e4e8eb;
-            position: sticky;
-            top: -650px;
-        }
-        .group-mall{
-            height: 46px;
-            background-color: #f7f9fa;
-            font-size: 12px;
-            border-bottom: 1px solid #dae1e6;
-            padding: 12px 4px 11px 10px;
-        }
-        .mall-area{
-            font-size: 12px;
-            color: #202020;
-            width: 330px;
-            height: 23px;
-            margin: 0 auto;
-        }
-        .ls6 {
-            margin: 10px 6px 0px;  
-        }
-        .ls12 {
-            margin: 10px 12px 0px;  
-        }
-        .group-goods{
-            height: 809px;
-            padding: 55px 8px 22px;
-            font-size: 12px;
-            position: relative;
-            display: block;
-        }
-        .page-button {
-            width: 29px;
-            height: 29px;
-            background-color: #fff;
-            border: 1px solid #dae1e6;
-            display: inline-block;
-        }
-        .shop-control{
-            position: absolute;
-            top:13px;
-            right: 8px;
-            display: flex;
-        }
-        .num-box {
-            /* float: left; */
-            height: 29px;
-            line-height: 29px;
-        }
-        .thumb-box {
-            width: 105px;
-            height: 145px;
-            margin: 10px 0px 0px;
-            border: 1px solid #dae1e6;
-        }
-        .goods-item{
-            width: 105px;
-            height: 183px;
-            margin: 0 auto;
-            float: left;
-            margin-right: 5.6px;
-
-        }
-        .shop-page{
-            height: 29px;
-            width: 332px;
-            margin: 18px 0px 0px;
-            text-align: center;
-            position: absolute;
-            bottom: 22px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .group-event{
-            height: 226px;
-            margin: 0px 8px;
-            padding: 19px 0px 17px;
-            border-top: 1px solid #e4e8eb;
-        }
-        .event-title{
-            height: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .event-control{
-            display: flex;
-        }
-
-        .group-plus{
-            height: 188px;
-            padding: 55px 0 30px;
-            margin: 0 8px;
-            border-top: 1px solid #e4e8eb;
-        }
-    </style>
 </head>
 <body>
     <header class="inner">
@@ -517,7 +49,7 @@
         <article class="article-left">
             <div class="headline-news">
                 <div style="margin: 15px; font-weight: bold;">
-                    연합뉴스
+                    연합뉴스 >
                 </div>
                 <div class="headline-menu-container">
                     <ul>
@@ -578,7 +110,153 @@
 
                 <div class="theme-container">
                     <div class="theme-list-wrap">
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220306_240%2F1646565724147TA6ne_JPEG%2F750_4.jpg%22&amp;type=nf340_228" alt="서재가 있는 다락" width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">서재가 있는 다락</strong>
+                                <p class="info-contents">2022년 새해를 시작하며 대청소 계획을 세우다가 작은 꾀를 하나 내었다. 집 전체를 한날에 몰아 치운다면 꼼꼼하게 치우지도 못할뿐더러 올해 불혹이 되어버린 동갑 부부의 몸에 무리가 갈 것이 빤 한일. 하여, 1월 한 달간 모든 주말의 하루를 청소의 날로 지정하고 층별로 나눠 청소를 하는 계획이다. 불과 1년 전의 불같은 성격의 나였다면 그런 긴 계획은 생</p>
+                                <div class="source-box">
+                                    <span class="source-inner">일리 ·</span>
+                                    <span class="date">1개월 전</span>
+                                </div>
+                            </div></a>
+                        </div>
 
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220228_220%2F1646055186152j78HI_JPEG%2F336_48.jpg%22&amp;type=nf340_228" alt="구축 전용 18평 아파트의 드라마틱한 변신" width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">구축 전용 18평 아파트에 드라마틱한 변신</strong>
+                                <p class="info-contents">인테리어 직후에는 이랬고, 이제 짐이 다 들어와서 써 보는 온라인 집들이입니다♥ 구축 전용 18평 아파트 Before 비포오오오는 정말 수리를 안 하신 집이었어요. 고장도 많이 나있었고, 지금까지 고치고 있습니다^^;; 구축 사실 때 주의할 점들도 다른 포스팅에 있으니 호옥시라도 구축 매수 예정이신 분들은 주의사항 열심히 찾아보시길 바랍니다!! 작지만 힐링</p>
+                                <div class="source-box">
+                                    <span class="source-inner">세뚜네 ·</span>
+                                    <span class="date">2개월 전</span>
+                                </div>
+                            </div></a>
+                        </div>
+
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220306_80%2F1646564006684PDlHa_JPEG%2F336_14.jpg%22&amp;type=nf340_228" alt="프랑스 작은 방이 떠오르는 집, 컬러가 있는 플랜테리어" width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">프랑스 작은 방이 떠오르는 집, 컬러가 있는 플랜테리어</strong>
+                                <p class="info-contents">안녕하세요, 저는 패션회사 VMD로 일하면서 이것 저것 관심도 많은 30대 직장인입니다. 코로나로 집에 있는 시간이 길어져 넷플릭스나 유튜브를 보며 뜨개질을 하는 취미가 생겼어요. 유튜브도 운영하고 있어서 간간히 영상편집도 하고요.· Life with Trees · 프랑스 작은 방이 떠오르는 집, 좋아하는 색 가득! 플랜테리어컬러감</p>
+                                <div class="source-box">
+                                    <span class="source-inner">트리플래닛 ·</span>
+                                    <span class="date">1주일 전</span>
+                                </div>
+                            </div></a>
+                        </div>
+
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220306_13%2F1646567129464LXXah_JPEG%2F750_10.jpg%22&amp;type=nf340_228" alt="일상 속 소금 활용법 7가지" width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">일상 속 소금 활용법 7가지</strong>
+                                <p class="info-contents">heo_ssam 다양하게 활용하는 소금 이야기 #소금활용팁 #소금활용법 #살림노하우 글·사진 @살림허선생 요리할 때 가장 기본적인 조미료 맛, 소금 심심함을 짠맛으로 채워주는 소금은 한식에서 빠질 수 없는 조미료예요. 김치를 만들 때도 물론이고, 소금은 음식의 간을 맞추는 데만 사용되는 것이 아니라 다양한 곳에서 활용하기 좋아요. 제가 살림과 일상 속에서 </p>
+                                <div class="source-box">
+                                    <span class="source-inner">살림허선생 ·</span>
+                                    <span class="date">4일 전</span>
+                                </div>
+                            </div></a>
+                        </div>
+                    </div>
+
+                    <div class="theme-list-wrap">
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220306_88%2F1646565848551xdt0M_JPEG%2F336_20.jpg%22&amp;type=nf340_228" alt="쓸수록 잘 샀다고 생각하는 주방용품 리스트" width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">쓸수록 잘 샀다고 생각하는 주방용품 리스트</strong>
+                                <p class="info-contents">솔직히 말하자면 나는 집에 필요한것들을 고를때 실용성 보다 심미성을 더 중요시하는 편이다. 🥲 감성이 묻어나야 우리집에 들일 수 있다 🥲 (피곤함) 그럼에도 불구하고! 써보니 실용성도 좋아서 "쓸수록 잘샀다"고 생각하는 #내돈내산 #감성가득 주방용품 5개를 꼽아봤다 🤍 에바솔로 소테팬, 소스팬 화이트팬을 찾아해매다 구매하게 된 에바솔로 소스, 소테..</p>
+                                <div class="source-box">
+                                    <span class="source-inner">어니 ·</span>
+                                    <span class="date">1주일 전</span>
+                                </div>
+                            </div></a>
+                        </div>
+
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220306_249%2F1646493509564bW1XY_JPEG%2F750_7.jpg%22&amp;type=nf340_228" alt="내가 좋아하는 공간들" width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">내가 좋아하는 공간들</strong>
+                                <p class="info-contents">드디어 합니다 온라인 집들이! 꺅 이 집에서 산지 반년이 넘어가는데 ㅋㅋㅋㅋㅋ 얼마전에 저희 집 구석구석 제가 좋아하는 공간들을 사진 찍을 일이 생겼어요. 사진을 아주 따뜻하게 잘 찍는 동생덕분에 이쁜 사진들로 늦게나마 온라인 집들이를 할 수 있게되었습니다 와아아아아아~~~! 안방&amp;안방 화장실 안방은 전체적으로 베이지톤이에요. 바닥이 베이지니까 자연스럽게 </p>
+                                <div class="source-box">
+                                    <span class="source-inner">쿵푸푸 ·</span>
+                                    <span class="date">1개월 전</span>
+                                </div>
+                            </div></a>
+                        </div>
+
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220305_65%2F1646481754287Oq75a_JPEG%2F336_12.jpg%22&amp;type=nf340_228" alt="금손 남편이 직접 만든 식탁, 작지만 아늑한 다이닝룸  " width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">금손 남편이 직접 만든 식탁, 작지만 아늑한 다이닝룸</strong>
+                                <p class="info-contents">안녕하세요 의미네 집이에요 오늘은 제가 아끼는 작은 공간 핸드메이드와 덴마크 디자인으로 꾸며진 작은 다이닝 공간 인테리어 한번 보여드리려고요 ㅎ 다이닝 공간의 의미 다이닝 공간은 여러분들에게 어떤 의미인가요? 사실 저희 부부는 맞벌이에 여러가지 사정으로 바쁘다보니 많은 시간을 함께하지 못하는 편이에요 그래서 하루 일과를 끝마치고 돌아와 함께하는 저녁식사에.</p>
+                                <div class="source-box">
+                                    <span class="source-inner">의미네 집 ·</span>
+                                    <span class="date">1주일 전</span>
+                                </div>
+                            </div></a>
+                        </div>
+
+                        <div class="theme-item">
+                            <div class="theme-thumb"><a href=""><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Fshop.phinf%2F20220305_93%2F1646489198169Kwu0H_JPEG%2F336_13.jpg%22&amp;type=nf340_228" alt="농가 주택의 변신, 40년 된 부모님 집 리모델링 " width="170" height="114" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'" loading="lazy"></a></div>
+                            <a href=""><div class="theme-info">
+                                <em class="theme-category">리빙</em>
+                                <strong class="title">농가 주택의 변신, 40년 된 부모님 집 리모델링</strong>
+                                <p class="info-contents">사람이 살지 않는 집은 수년 만에 폐가로 전락한다. 부모님이 돌아가시고 빈집이 된 이 주택도 하루가 다르게 낡아갔다. 쓰러져 가는 주택을 다시 살려보자고 먼저 나선 건 아내였다. 글 사진 백홍기 기자 취재협조 더하우스 인테리어HOUSE NOTE DATA 위치 전북 정읍시 입암면 건축구조 중량 목구조 건축규모 단층 주택 대지면적 1200.00㎡(362</p>
+                                <div class="source-box">
+                                    <span class="source-inner">전원주택라이프 ·</span>
+                                    <span class="date">어제</span>
+                                </div>
+                            </div></a>
+                        </div>
+                    </div>
+
+                    <div class="theme-bottom-title">
+                        <a href="">오늘 가장 따뜻한 클릭 > </a>
+                    </div>
+                    <div class="theme-bottom-media">
+                        <a href=""><div class="media-contents">
+                            <div class="media-thumb">
+                                <img src="https://happybean-phinf.pstatic.net/20220223_160/1645606051084pq2s6_JPEG/mm.jpg?type=f464_260" alt="자연이 준 선물, 꿀벌 벌집으로 만든 롤밀랍랩" width="232" height="130" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'">
+                            </div>
+                            <div class="media-info">
+                                <stong class="title">자연이 준 선물, 꿀벌 벌집으로 만든 롤밀랍랩</stong>
+                                <div>
+                                <span>손끋비 ·</span>
+                                <em>250%</em><span>달성</span>
+                                </div>
+                            </div>
+                        </div></a>
+                        <a href=""><div class="media-contents">
+                            <div class="media-thumb">
+                                <img src="https://happybean-phinf.pstatic.net/20220303_197/1646276317897ltxcu_JPEG/EBB8B8ED-A4ECB4EB-28129.jpg?type=f464_260" alt="루게릭병 환우에게 희망을 선물하는 팔찌" width="232" height="130" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'">
+                            </div>
+                            <div class="media-info">
+                                <stong class="title">루게릭병 환우에게 희망을 선물하는 팔찌</stong>
+                                <div>
+                                <span>승일희망재단 ·</span>
+                                <em>212%</em><span>달성</span>
+                                </div>
+                            </div>
+                        </div></a>
+                        <a href=""><div class="media-contents">
+                            <div class="media-thumb">
+                                <img src="https://happybean-phinf.pstatic.net/20220121_129/1642725447288O0rV5_JPEG/jerry-wang-0qmXPnZKeLU-unsplash.jpg?type=f464_260" alt="새 학기, 설렘보다 걱정과 한숨이 먼저" width="232" height="130" onerror="this.outerHTML='<span class=\'pm_noimg\'><span class=\'noimg_text\'>이미지 준비중</span></span>'">
+                            </div>
+                            <div class="media-info">
+                                <stong class="title">새 학기, 설렘보다 걱정과 한숨이 먼저</stong>
+                                <div>
+                                <span>구로종합사회복지관 ·</span>
+                                <em>891,100원</em><span>기부</span>
+                                </div>
+                            </div>
+                        </div></a>
                     </div>
                 </div>
             </div>      
@@ -621,10 +299,10 @@
                 <div class="group-goods">
                     <div class="shop-control"><div class="num-box"><strong>1</strong> / 18</div>&nbsp;<a href="" class="page-button"></a><a href="" class="page-button"></a></div>
 
-                    <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
-                    <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
-                    <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
-                    <div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div><div class="goods-item"><div class="thumb-box"></div></div>
+                    <div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220302_6/8dad4e2f-ca74-4315-aa77-19386a9f8d88.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220302_6/8dad4e2f-ca74-4315-aa77-19386a9f8d88.jpg?type=f214_292" width="107" height="146" alt="SALE 최대~90%↓ 봄엔~이렇게입어~"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220303_15/9de79d59-da58-4c23-8578-7d3eefcf5865.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220303_15/9de79d59-da58-4c23-8578-7d3eefcf5865.jpg?type=f214_292" width="107" height="146" alt="흔치않은 특별함 누가봐도 예쁘대"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220224_15/3992a5f6-4554-4141-af86-f173120015d9.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220224_15/3992a5f6-4554-4141-af86-f173120015d9.jpg?type=f214_292" width="107" height="146" alt="내입맛을 돌려줘~ 홍어사면편육까지"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div>
+                    <div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220304_5/c6a8b86f-1f51-4e2d-bf5f-b2055b45d054.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220304_5/c6a8b86f-1f51-4e2d-bf5f-b2055b45d054.jpg?type=f214_292" width="107" height="146" alt="전상품 무료배송! 예쁜신상 득템해~"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220303_8/eca6dd4f-569a-4336-852b-55674bbc08a4.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220303_8/eca6dd4f-569a-4336-852b-55674bbc08a4.jpg?type=f214_292" width="107" height="146" alt="여심저격!목걸이 14K선물 감동이야"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220211_13/bab079c9-5d22-4242-9e74-8fb6f9840cfc.jpg?type=f214_292" width="107" height="146" alt="직원들도쟁여두는 역대급 전제품50%"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div>
+                    <div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220217_27/662178f1-1b94-49d7-ad19-38f8d6b5bdd5.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220217_27/662178f1-1b94-49d7-ad19-38f8d6b5bdd5.jpg?type=f214_292" width="107" height="146" alt="어피치 러그 카카오프렌즈SALE"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220228_13/8b7ddda9-ee29-42aa-8d08-e48093b6686e.jpg?type=f214_292" width="107" height="146" alt="컬러감 예술이야 반값세일 서둘러~"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220304_10/0f971ad2-e2ee-4bfe-85de-8c2c75713a4c.jpg?type=f214_292" lazyimg="https://s.pstatic.net/shopping.phinf/20220304_10/0f971ad2-e2ee-4bfe-85de-8c2c75713a4c.jpg?type=f214_292" width="107" height="146" alt="우아함이 급상승! 인생원피스 BEST"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div>
+                    <div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220204_5/3386da39-3104-4ee4-8a5d-b2b2e6164820.jpg?type=f214_292" width="107" height="146" alt="오늘만 최대~50%! 모노그램크로스백"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220225_27/c3e14907-7dbb-4951-a785-02887ca1d1f9.jpg?type=f214_292" width="107" height="146" alt="역대급 금값폭락! 최대68%할인특가!"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div><div class="goods-item"><div class="thumb-box"><img src="https://s.pstatic.net/shopping.phinf/20220124_7/efc76d4b-23cf-4f3b-a552-a17b2908cdc0.jpg?type=f214_292" width="107" height="146" alt="상시 할인혜택! 인기 이불겸패드"></div><p class="title-box"><span class="title">LikeLion</span><span>신입 부원 환영!!</span></p></div>
 
                     <div class="shop-page"><a href="" class="page-button"></a><div class="num-box"> &nbsp; 1 / 18 &nbsp;</div> <a href="" class="page-button"></a></div>
                 </div>
@@ -634,17 +312,89 @@
                         <div><strong>반갑다! 쇼핑뉴스</strong></div>
                         <div class="event-control"><div class="num-box"> <strong>1</strong> / 4 &nbsp;</div><a href="" class="page-button"></a><a href="" class="page-button"></a></div>
                     </div>
+                    <ul>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                        <li class="event-list"><a href=""><strong>LikeLion</strong>  <span>10기 신입부원 모집! 비전공자 환영!!</span> </a></li>
+                    </ul>
                 </div>
 
                 <div class="group-plus">
-
+                    <div class="plus-title">
+                        <div class="plus-category">
+                            <a href="">패션</a><a href="">라이프</a><a href="">뷰티</a><a href="">디지털·레저</a>
+                        </div>
+                        <div class="event-control"><div class="num-box"> <strong>1</strong> / 4 &nbsp;</div><a href="" class="page-button"></a><a href="" class="page-button"></a></div>
+                    </div>
+                    <div class="plus-area">
+                        <div class="plus-item"><img src="https://s.pstatic.net/shopping.phinf/20220218_2/d33ae608-8e6e-47e0-ab3e-5b47d2d07873.jpg" lazyimg="https://s.pstatic.net/shopping.phinf/20220218_2/d33ae608-8e6e-47e0-ab3e-5b47d2d07873.jpg" width="163" height="163" alt="하나만 사도 무료 배송?"></div>
+                        <span class="title">LikeLion</span>
+                    </div>
+                    <div class="plus-area">
+                        <div class="plus-item"><img src="https://s.pstatic.net/shopping.phinf/20220304_2/449fbc61-20ee-4de0-b6ac-01b3bc7d3c76.jpg" lazyimg="https://s.pstatic.net/shopping.phinf/20220304_2/449fbc61-20ee-4de0-b6ac-01b3bc7d3c76.jpg" width="163" height="163" alt="봄에 딱 좋아! 인기운동화"></div>
+                        <span class="title">LikeLion</span>
+                    </div>
                 </div>
             </div>
         </article>
     </section>
 
     <footer>
+        <div class="footer-inner">
+            <div class="ad"></div>
+            <div class="notice-area"><a href="">공지사항</a> <a href="">서비스 전체보기 ></a></div>
+            <div class="partner-box-wrap">
+                <div class="partner-box">
+                    <h3 class="title">Creater</h3>
+                    <a href="">크리에이터&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;스몰비즈니스</a>
+                </div>
+                <div class="partner-box">
+                    <h3 class="title">Partners</h3>
+                    <a href="">SME 풀케어 시스템&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;비즈니스·광고&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;스토어 개설&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;지역업체 등록&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;엑스퍼트 등록</a>
+                </div>
+                <div class="partner-box">
+                    <h3 class="title">Developers</h3>
+                    <a href="">네이버 개발자 센터&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;오픈 API&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;오픈소스&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;네이버 D2&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;네이버 D2SF&nbsp;&nbsp;</a>
+                    <a href="">|&nbsp;&nbsp;네이버 랩스&nbsp;&nbsp;</a>
+                </div>
+            </div>
 
+            <div class="service-wrap">
+                <div class="service-box">
+                    <div><strong class="title">웨일 브라우저</strong><a href="">다운받기</a></div>
+                    <a href=""><img src="data:image/png;base64,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" alt="웨일" width="48" height="48"></a>
+                </div>
+                <div class="service-box">
+                    <div><strong class="title">프로젝트 꽃</strong><a href="">바로가기</a></div>
+                    <a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABkCAMAAAA47XeXAAAAgVBMVEUAAADN5PdGm99Gm99Gm99Gm99Gm95Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gm99Gmt9Gm99Gm99Gm99Gm95Gm99Gm99Gm95Gm99Hm99Gm99Gm9/////3+/5cp+LO5PfR5/fO5fdcp+P7/f/zv5GhAAAAInRSTlMA/v7vH9u5qJNgGwb6l8a9uqF9WFUyLxYMCtbVmLCwe4OCj8gzEgAAA0NJREFUaN7NmmFz4iAQhkkwMTHGWrWtWvWuq8mF+/8/8Ey2nb0OhSwQZnw+MHQ7pbjAy2s2gsuiLPJMLpcyy4tyISZltnmHbxw3MzEVr/MUNNL5q5iCt2ccXCN9fhPB7CQYkTsRRlWDlboSAexzGCHfC28OKxhldfDOzBMwePLNTw0sauHFFphshQcLCUwkaQRfXYBPSkrEUBdv3jezcXXhw1ciUhc+fCUidQlH7qzqEk5d2dQlnHxvU5dwVgdXdSGclaiGyamt6hLO1qIu4ZASzcFE092SBprk1jagulvXAAw/qb5N7m176xQYmOPoLymYaK/X65/PNhlagE6LGUhfRM8FjNzuf/73//bHmInzoJEpjMyeWpp9RzGz/PT6+QvMNO2Q+67PPeYZY5h7jDVg5OM+/BGikd13JfDAj/Ad1WLMyEyUwKPT00ypN1GKAljQJtFiFgqRe86eYhbWIvPPPR5d+9pKiIgUwKNJdHXBvW9jyRye1EWLWYfnJcd141Byspizz7gbUyWDuqiW0v15D9g3ZgF86JwyKUgUHJaATUmS5rsEdkkTZLjZS8Alw+skFr8Nl6H6uosShaKOp3Zo+/jgFTDe+wcSfv0yFGfQaLX7tDO0reXOPRuMCG4Q11Y3IiYblWgzS7R+h31qdRtlGB7zikeUckz+AB3a8FuMqD7Cd2nhUHLOEIkLubQIkEuLxIdwEwUy3HyXxsbgPMJcGuGox+TSIugxuTQ+KHIaAS5N92eIIuMT5tJoPfHy5q9yKoXLelLuKRri0mjMQdhwTPw6Sv8pzKXhFyhNilEwkSCXRrnAnaPnJdyl0UrqXircpeHVglnv+62K4NJo3lFcGmWd79KO7OQoXAE8XNO6tIQGxj7fpfHTwk8RubQLWEGvgTNGKzj01fixunCMCCYcvSSlaFwUyKVx86J3bczpUR3zimq1LqdosAUbJF54ar+uk5Gju436mPTk8ZAXFdO93HRYTesUVgf3B+y0XdxLfdVputmfKp/iBtNjyl3c0kzUwtJIWewIPvAL9LOyWLsV9WAps3VRzh6hJBm3oOqsRKfHLGYzS/GP+iLBuBKdqkd+iWPkFZTHf4Em4us/uhI5qss/6zK5u8+AXpwAAAAASUVORK5CYII=" alt="꽃" width="47" height="50"></a>
+                </div>
+            </div>
+
+            <div class="crop-area">
+                <a href="">회사소개&nbsp;</a>
+                <a href="">|&nbsp;인재채용&nbsp;</a>
+                <a href="">|&nbsp;제휴제한&nbsp;</a>
+                <a href="">|&nbsp;이용약관&nbsp;</a>
+                <a href="">|&nbsp;<strong>개인정보처리방침</strong>&nbsp;</a>
+                <a href="">|&nbsp;청소년보호정책&nbsp;</a>
+                <a href="">|&nbsp;네이버 정책&nbsp;</a>
+                <a href="">|&nbsp;고객센터&nbsp;</a>
+                <a href="" style="color:#202020;">&nbsp;<strong>ⓒ NAVER Crop.</strong></a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
