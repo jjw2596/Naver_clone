@@ -671,6 +671,9 @@ a:visited{
 .partner-box+.partner-box{
     margin-top: 9px;
 }
+.partner-box a:hover{
+    text-decoration: underline;
+}
 
 .service-wrap{
     width: 350px;
@@ -701,4 +704,7 @@ a:visited{
 }
 .crop-area a{
     color: #777;
+}
+.crop-area a:hover{
+    text-decoration: underline;
 }
